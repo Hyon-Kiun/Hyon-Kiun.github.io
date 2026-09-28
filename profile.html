@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロフィール | 玄紀雲の研究ページ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<div class="page-header">
+  <h1>プロフィール</h1>
+  <p>Profile</p>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="profile-layout reveal">
+      <div class="profile-photo">写真<br>(準備中)</div>
+      <div class="profile-info">
+        <h2 id="profile-name"></h2>
+        <p class="affiliation" id="profile-affiliation"></p>
+        <p class="intro">（ここに自己紹介・経歴を書きます。出身、これまでの経歴、研究を始めたきっかけ、専門分野などを2〜5行程度でまとめると読みやすいです。）</p>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:48px;">経歴</h2>
+    <ul class="reveal" style="line-height:2;">
+      <li>20XX年 ○○大学 ○○学部 卒業</li>
+      <li>20XX年 ○○大学大学院 ○○学研究科 修士課程 入学</li>
+      <li>20XX年 ○○大学大学院 ○○学研究科 博士課程 進学</li>
+    </ul>
+
+    <h2 class="section-title" style="margin-top:48px;">専門分野・関心</h2>
+    <p class="reveal">（専門分野やキーワードを箇条書き、またはタグのように並べると分かりやすいです。例: ○○教育、○○論、○○研究法 など）</p>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="js/site-config.js"></script>
+<script src="js/common.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("profile-name").textContent = SITE_CONFIG.personName;
+    document.getElementById("profile-affiliation").textContent =
+      SITE_CONFIG.affiliation + " ／ " + SITE_CONFIG.status;
+  });
+</script>
+</body>
+</html>

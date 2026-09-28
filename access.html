@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アクセス | 玄紀雲の研究ページ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<div class="page-header">
+  <h1>アクセス</h1>
+  <p>SNS、note等</p>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <h2 class="section-title">SNS・外部リンク</h2>
+    <ul id="sns-list" class="sns-list"></ul>
+
+    <h2 class="section-title" style="margin-top:48px;">お問い合わせ</h2>
+    <p>共同研究のご相談などは、下記のメールアドレスまでご連絡ください。</p>
+
+    <dl class="contact-card reveal">
+      <dt>氏名</dt>
+      <dd id="contact-name"></dd>
+      <dt>所属</dt>
+      <dd id="contact-affiliation"></dd>
+      <dt>メールアドレス</dt>
+      <dd><a id="contact-email" href="#"></a></dd>
+    </dl>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="js/site-config.js"></script>
+<script src="js/common.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("contact-name").textContent = SITE_CONFIG.personName;
+    document.getElementById("contact-affiliation").textContent = SITE_CONFIG.affiliation;
+    const emailEl = document.getElementById("contact-email");
+    emailEl.textContent = SITE_CONFIG.email;
+    emailEl.href = "mailto:" + SITE_CONFIG.email;
+
+    const snsLabels = { twitter: "X (Twitter)", note: "note", researchmap: "researchmap" };
+    const snsListEl = document.getElementById("sns-list");
+    const entries = Object.entries(SITE_CONFIG.sns).filter(([, url]) => url);
+
+    if (entries.length === 0) {
+      snsListEl.innerHTML = `<p class="empty">（SNS・noteのリンクを用意したら site-config.js に追加してください）</p>`;
+    } else {
+      snsListEl.innerHTML = entries
+        .map(
+          ([key, url]) => `<li><a href="${url}" target="_blank" rel="noopener">${snsLabels[key] || key}</a></li>`
+        )
+        .join("");
+    }
+  });
+</script>
+</body>
+</html>

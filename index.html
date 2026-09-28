@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玄紀雲の研究ページ</title>
+<meta name="description" content="玄紀雲(広島大学大学院 人間社会科学研究科)の研究・活動を紹介するページです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<section class="hero-photo">
+  <span class="hero-photo-note">写真プレースホルダー(準備でき次第差し替え)</span>
+  <div class="hero-vertical-text" aria-hidden="true">HIROSHIMA UNIVERSITY</div>
+  <div class="hero-photo-inner">
+    <div class="hero-tagline-box">
+      <p class="hero-eyebrow">Research Website</p>
+      <h1>研究テーマや活動の記録を発信しています</h1>
+      <p class="hero-sub">（ここにサイト全体のキャッチコピー・研究概要の一言紹介を入れます。）</p>
+    </div>
+  </div>
+  <a class="scroll-indicator" href="#page-content">
+    <span>Scroll</span>
+    <span class="scroll-arrow">&darr;</span>
+  </a>
+</section>
+
+<section class="section" id="page-content">
+  <div class="container">
+    <h2 class="section-title">このページでできること</h2>
+    <div class="card-grid">
+      <div class="card reveal">
+        <h3>プロフィール</h3>
+        <p>経歴・所属・専門分野について紹介しています。</p>
+        <a class="more" href="profile.html">プロフィールを見る &rarr;</a>
+      </div>
+      <div class="card reveal" style="transition-delay:0.05s">
+        <h3>研究</h3>
+        <p>研究テーマや、これまでの論文・学会発表をまとめています。</p>
+        <a class="more" href="research.html">研究を見る &rarr;</a>
+      </div>
+      <div class="card reveal" style="transition-delay:0.1s">
+        <h3>活動</h3>
+        <p>発表や執筆物、活動の記録を随時更新しています。</p>
+        <a class="more" href="activity.html">活動を見る &rarr;</a>
+      </div>
+      <div class="card reveal" style="transition-delay:0.15s">
+        <h3>ゼミ</h3>
+        <p>所属ゼミの紹介や活動の様子を掲載しています。</p>
+        <a class="more" href="seminar.html">ゼミを見る &rarr;</a>
+      </div>
+      <div class="card reveal" style="transition-delay:0.2s">
+        <h3>アクセス</h3>
+        <p>SNS・noteなどの外部リンクとお問い合わせ先です。</p>
+        <a class="more" href="access.html">アクセスを見る &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">活動</h2>
+    <ul id="activity-list-preview"></ul>
+    <p class="section-footer"><a href="activity.html">活動一覧を見る &rarr;</a></p>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="js/site-config.js"></script>
+<script src="js/activity-data.js"></script>
+<script src="js/research-data.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
